@@ -35,24 +35,24 @@ To disable deprecation warning use below command.
 ### APIs Description:
 All API routes are included in media_upload_app.py. API routes, methods and description is as below.
 
-1)  Route : '/items/<int:id>'
-    Method : GET
-    Description : Response item details for given valid id. API format    'http://example.com/api/items/98'
+1)  Route : '/items/\<int:id\>'<br />
+    Method : GET<br />
+    Description : Response item details for given valid id. API format 'http://example.com/api/items/98'
    
-2)  Route : '/items'
-    Method : GET
+2)  Route : '/items'<br />
+    Method : GET<br />
     Description : Response list of items and details for given valid id. This could be very large data and hence pagination or any other method will be needed. API format 'http://example.com/api/items'
    
-3)  Route : '/items'
-    Method : POST
+3)  Route : '/items'<br />
+    Method : POST<br />
     Description : Requires complete and valid item details in json. Creates new item and gives its URI in the response header. API format 'http://example.com/items'
    
-4)  Route : '/items/<int:id>'
-    Method : PUT
+4)  Route : '/items/\<int:id\>'<br />
+    Method : PUT<br />
     Description : Requires complete and valid item details in json along with valid id. API format 'http://example.com/items/87'
    
-5)  Route : '/items/<int:id>'
-    Method : DELETE
+5)  Route : '/items/\<int:id\>'<br />
+    Method : DELETE<br />
     Description : Requires valid id. Deletes item. API format 'http://example.com/items/87'
 
 
