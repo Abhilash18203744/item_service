@@ -4,7 +4,7 @@ Backend service for item management
 ### Application Setup:
 Execute following command for setup and dependencies installation.
 
-> python setup.py install
+> python3 setup.py install
 
 OR
 
@@ -16,7 +16,7 @@ Installing dependencies directly from requirements.txt
 ### Run application:
 Execute following command to run app on local server. APIs can be triggered with any API client(e.g. postman).
 
-> python media_upload_app.py
+> python3 media_upload_app.py
 
 API's are developed using flask framework and other required libraries. A basic sqlite database is used to keep project simple and focus on API related functionalities. 
 Code structure is divided in three basic parts: 1) media_upload_app.py: for configuration, db preparation, adding endpoints and running application. 2) models/item.py: for item table in database. 3) resources/item.py: for Item and ItemList resources and methods. A test file is also included (app_test.py) with 7 basic test cases.
@@ -26,11 +26,11 @@ Code structure is divided in three basic parts: 1) media_upload_app.py: for conf
 Execute following command to run all the test cases in app_tests.py file.
 Total 7 test cases are included in this file along with setup and teardown functions. 
 
-> python -m unittest app_tests
+> python3 -m unittest app_tests
 
 To disable deprecation warning use below command.
 
-> python -W ignore::DeprecationWarning -m unittest app_tests
+> python3 -W ignore::DeprecationWarning -m unittest app_tests
 
 ### APIs Description:
 All API routes are included in media_upload_app.py. API routes, methods and description is as below.
