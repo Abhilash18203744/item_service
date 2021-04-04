@@ -29,12 +29,18 @@ def validate_json_input(request):
 # Item class with GET, PUT, DELETE methods, id needed in the endpoint
 class Item(Resource):
     def get(self, id):
+        """
+        Get method to fetch item details for input id
+        """
         item = ItemModel.query.get(id)
         if item:
             return item.json(), 200
         return {"Message": "Item not found."}, 404
 
     def put(self, id):
+        """
+        PUT method to update item details for given id
+        """
         # Validate input json
         error = validate_json_input(request)
         if error:
@@ -63,6 +69,9 @@ class Item(Resource):
         return {"Message": "Item with ID {} altered.".format(id)}, 200
 
     def delete(self, id):
+        """
+        DELETE method to delete the item of given id
+        """
         if not id:
             return {'Message': 'Must provide the item ID'}, 400
         item = ItemModel.query.get(id)
@@ -76,9 +85,15 @@ class Item(Resource):
 # ItemList class with GET, POST methods, id not expected in the endpoint
 class ItemList(Resource):
     def get(self):
+        """
+        GET method to fetch list of items 
+        """
         return {"items": [item.json() for item in ItemModel.query.all()]}, 200
 
     def post(self):
+        """
+        POST method to create new item 
+        """
         # validate input json
         error = validate_json_input(request)
         if error:
